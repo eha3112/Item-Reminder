@@ -1,0 +1,34 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Product",
+    "description": "an item defintion",
+    "type": "object",
+    "properties" : 
+    {
+        "item" : {
+            "description" : "it can be a single word, or a Chuck sentece ...",
+            "type": "string"
+        },
+        "itemType":{
+            "description": "a keyword to define the type of the type of the item (setence, vocabular, formula ...)",
+            "type": "string"
+        },
+        "metaData":{
+            "description": "",
+            "type": "object",
+            "properties" : {
+                "definition" : {
+                    "description" : "Defintion of the vocabulary, the full sentece or the defintion of a formula",
+                    "type": "string"
+                },
+                "examples": {
+                    "description": "List of examples",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                      
+                }
+            }
+        }
+    }
+  }
