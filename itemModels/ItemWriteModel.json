@@ -1,0 +1,35 @@
+{
+    "$schema": "https://json-schema.org/draft/2021-12/schema",
+    "title": "Single Item Data",
+    "description": "an item defintion",
+    "type": "object",
+    "required": [ "item", "itemType", "itemDesc"],
+    "properties" : 
+    {
+        "item" : {
+            "description" : "it can be a single word, or a Chuck sentece ...",
+            "type": "string"
+        },
+        "itemType":{
+            "description": "a keyword to define the type of the type of the item (setence, vocabular, formula ...)",
+            "type": "string"
+        },
+        "itemDesc":{
+            "description": "",
+            "type": "object",
+            "properties" : {
+                "definition" : {
+                    "description" : "Defintion of the vocabulary, the full sentece or the defintion of a formula",
+                    "type": "string"
+                },
+                "examples": {
+                    "description": "List of examples",
+                    "type": "array",
+                    "items": {
+                        "type": "string"  
+                    }
+                }
+            }
+        }
+  }
+}
